@@ -79,8 +79,9 @@ def image_processing():
     augmented_image = Image.open(path_augmented_images)
     st.image(augmented_image)
     st.write('code')
+    data_augmentation_code = menu_contents['data_augmentation_code']
     with st.echo():
-        menu_contents['data_augmentation_code']
+        data_augmentation_code
     
     
     
