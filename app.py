@@ -125,10 +125,11 @@ def generate_result(prediction):
     ## Predicted RESULT
     """)
     
-    for prob in prediction:
-        st.text(prob)
-    probablity = int(prediction[0])
-    st.write('There is',probablity,'%  chance of malignant')
+    probablity = float(prediction[0])
+    malignant_prob = probablity*100
+    benign_prob = (1-probablity)*100
+    st.write('There is %.2f' % benign_prob,'%  chance of benign')
+    st.write('There is %.2f' % malignant_prob,'%  chance of malignant')
 
 
 
