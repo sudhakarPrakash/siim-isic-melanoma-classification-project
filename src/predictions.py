@@ -1,7 +1,7 @@
 from keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img, img_to_array, save_img
 
-from app import IMG_SIZE
+from src.app import IMG_SIZE
 
 
 

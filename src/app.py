@@ -9,8 +9,8 @@ import random
 import time
 import os
 
-from utils import menu_contents
-from predictions import predict_result
+from src.utils import menu_contents
+from src.predictions import predict_result
 
 
 def commom_format():
