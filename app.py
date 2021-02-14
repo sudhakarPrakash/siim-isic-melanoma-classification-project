@@ -82,6 +82,8 @@ def image_processing():
     data_augmentation_code = menu_contents['data_augmentation_code']
     with st.echo():
         data_augmentation_code
+    dir_image_processing = os.join(base_dir,'image_processing/')
+    show_images(dir_image_processing)
     
     
     
