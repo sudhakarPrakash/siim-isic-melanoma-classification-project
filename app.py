@@ -164,8 +164,8 @@ def predict_util():
                 Click 'predict' to see results
                 """)
             img_array = img_array/255.0
-            #test_batch = np.expand_dims(img_array, axis = 0)
-            test_batch = img_array.reshape((1, IMG_SIZE, IMG_SIZE, 3))
+            test_batch = np.expand_dims(img_array, axis = 0)
+            #test_batch = img_array.reshape((1, IMG_SIZE, IMG_SIZE, 3))
             prediction = predict_result(test_batch)
             generate_result(prediction)
             #predict_button = st.button('Predict')
