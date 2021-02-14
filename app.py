@@ -128,8 +128,8 @@ def generate_result(prediction):
     probablity = float(prediction[0])
     malignant_prob = probablity*100
     benign_prob = (1-probablity)*100
-    st.write('There is %.2f' % benign_prob,'%  chance of benign')
-    st.write('There is %.2f' % malignant_prob,'%  chance of malignant')
+    st.write('  %.2f' % benign_prob,'%  chance of benign')
+    st.write('  %.2f' % malignant_prob,'%  chance of malignant')
 
 
 
