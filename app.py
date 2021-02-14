@@ -160,10 +160,10 @@ def predict_util():
             #else:
                 #st.text('predict button not clicked')
         else:
-            st.write('No file uploaded..')
+            st.write('No file uploaded inner..')
         
     except:
-        message = 'No file uploaded...'
+        message = 'No file uploaded outer...'
         st.text(message)
         
     
