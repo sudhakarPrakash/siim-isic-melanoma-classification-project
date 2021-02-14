@@ -120,6 +120,26 @@ def sidebar_util():
     return sidebar
 
 
+def generate_result(prediction):
+    st.write("""
+    ## Predicted RESULT
+    """)
+    
+    for prob in prediction:
+        st.text(prob)
+    probablity = prediction[0]
+    st.write('There is',probablity,'%  chance of malignant')
+
+
+
+def predict_result(batches):
+    model_path = '/app/siim-isic-melanoma-classification-project/model_and_log_files/model.h5'
+    model = load_model(model_path)
+    predictions = model.predict(x=batches)
+    return predictions
+
+
+
 def predict_util():
     '''creates the predict button and file_uploader
     and get the uploaded image '''
@@ -171,24 +191,6 @@ def predict_util():
         st.text(message)
         
     
-    
-def generate_result(prediction):
-    st.write("""
-    ## Predicted RESULT
-    """)
-    
-    for prob in prediction:
-        st.text(prob)
-    probablity = prediction[0]
-    st.write('There is',probablity,'%  chance of malignant')
-
-
-
-def predict_result(batches):
-    model_path = '/app/siim-isic-melanoma-classification-project/model_and_log_files/model.h5'
-    model = load_model(model_path)
-    predictions = model.predict(x=batches)
-    return predictions
 
 
 def processing_test_file(test_image_path):
