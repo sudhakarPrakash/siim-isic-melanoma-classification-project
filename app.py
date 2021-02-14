@@ -10,7 +10,7 @@ import time
 import os
 
 from utils import menu_contents
-from predictions import predict_result
+from predictions import predict_result, processing_test_file, processing_test_file, get_uploaded_image_path
 
 
 def commom_format():
