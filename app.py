@@ -145,18 +145,18 @@ def predict_util():
                 Click 'predict' to see results
                 """)
             predict_button = st.button('Predict')
-            if predict_button:
-                #save uploaded image and get path
-                test_image_path = get_uploaded_image_path(img_array)
-                # generate batch of single image
-                st.write('test_image_path = '+test_image_path)
-                
-                test_batch = processing_test_file(test_image_path)
-                time.sleep(2)
-                # predict on single batch
-                prediction = predict_result(test_batch)
-                # generate result from predictions
-                generate_result(prediction)
+            #if predict_button:
+            #save uploaded image and get path
+            test_image_path = get_uploaded_image_path(img_array)
+            # generate batch of single image
+            st.write('test_image_path = '+test_image_path)
+            
+            test_batch = processing_test_file(test_image_path)
+            time.sleep(2)
+            # predict on single batch
+            prediction = predict_result(test_batch)
+            # generate result from predictions
+            generate_result(prediction)
             #else:
                 #st.text('predict button not clicked')
         else:
