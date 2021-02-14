@@ -133,7 +133,7 @@ def generate_result(prediction):
 
 
 def predict_result(batches):
-    model_path = '/app/siim-isic-melanoma-classification-project/model_and_log_files/model.h5'
+    model_path = '/app/siim-isic-melanoma-classification-project/model_and_log/model.h5'
     model = load_model(model_path)
     predictions = model.predict(x=batches)
     return predictions
