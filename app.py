@@ -108,7 +108,7 @@ def sidebar_util():
     
     st.write('Dounload image to test')
     
-    st.markdown(download_link, unsafe_allow_html=True)
+    sidebar.markdown(download_link, unsafe_allow_html=True)
     
     
     if option == 'About Dataset':
