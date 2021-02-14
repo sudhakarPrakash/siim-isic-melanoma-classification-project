@@ -10,7 +10,7 @@ import time
 import os
 
 from utils import menu_contents
-from predictions import predict_result, processing_test_file, processing_test_file, get_uploaded_image_path
+from predictions import predict_result, generate_result, processing_test_file,
 
 
 def commom_format():
@@ -118,6 +118,33 @@ def sidebar_util():
     
         
     return sidebar
+
+
+
+def get_uploaded_image_path(img_array):
+    
+    try:
+        not_created = True
+        while not_created:
+            name_of_directory = random.choice(list(range(0, 1885211)))
+            try:
+                ROOT_DIR = os.path.abspath(os.curdir)
+                if str(name_of_directory) not in os.listdir(ROOT_DIR):
+                    not_created = False
+                    path = ROOT_DIR + "/" + str(name_of_directory)
+                    os.mkdir(path)
+                    # directory made
+            except:
+                st.write("""
+                    ### some error occured ,Try again !!!
+                    """)
+
+        # save image on that directory
+        save_img(path+"/test_image.png", img_array)
+        image_path = path+"/test_image.png"
+    except:
+        st.write('something went wrong while saving uploaded file...')
+    return image_path
 
 
 
