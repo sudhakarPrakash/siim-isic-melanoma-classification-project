@@ -80,7 +80,7 @@ def image_processing():
     st.image(augmented_image)
     st.write('code')
     with st.echo():
-        data_augmentation_code
+        menu_contents['data_augmentation_code']
     
     
     
