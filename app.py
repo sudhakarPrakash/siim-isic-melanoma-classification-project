@@ -154,8 +154,7 @@ def predict_util():
         image = Image.open(img_file_buffer)
         image = image.resize((IMG_SIZE,IMG_SIZE))
         img_array = np.array(image)
-        st.write('### To predict for another , first remove this image
-            Click on cross sign to remove')
+        st.write('### To predict for another , first remove this image. Click on cross sign to remove')
         st.write("""
             Uploaded Image Preview 224 X 224
             """)
