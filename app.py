@@ -127,7 +127,7 @@ def generate_result(prediction):
     
     for prob in prediction:
         st.text(prob)
-    probablity = prediction[0]
+    probablity = int(prediction[0])
     st.write('There is',probablity,'%  chance of malignant')
 
 
