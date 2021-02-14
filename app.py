@@ -106,8 +106,6 @@ def sidebar_util():
         ' MENU',
         ['About Dataset','Data Preparation and Exploration','Image Processing','Model and output files'])
     
-    st.write('Dounload image to test')
-    
     sidebar.markdown(download_link, unsafe_allow_html=True)
     
     
