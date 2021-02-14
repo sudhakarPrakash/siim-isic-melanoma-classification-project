@@ -10,7 +10,7 @@ import time
 import os
 
 from utils import menu_contents
-from predictions import predict_result, generate_result, processing_test_file,
+from predictions import (predict_result, generate_result, processing_test_file)
 
 
 def commom_format():
