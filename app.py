@@ -106,6 +106,11 @@ def sidebar_util():
         ' MENU',
         ['About Dataset','Data Preparation and Exploration','Image Processing','Model and output files'])
     
+    st.write('Dounload image to test')
+    
+    st.markdown(download_link, unsafe_allow_html=True)
+    
+    
     if option == 'About Dataset':
         about_dataset()
     if option == 'Data Preparation and Exploration':
@@ -115,7 +120,7 @@ def sidebar_util():
     if option == 'Image Processing':
         image_processing()
     
-        
+    
     return sidebar
 
 
@@ -193,7 +198,7 @@ if __name__=='__main__':
     IMG_SIZE = 224
     base_dir = '/app/siim-isic-melanoma-classification-project/'
     github_link = "[GitHub link of code](https://github.com/sudhakarPrakash/siim-isic-melanoma-classification-project)"
-    
+    download_link = "[Download image to predict](https://drive.google.com/drive/folders/1k6dwxaLDNBLOuiBzAVKV16aWDyFUNmmz?usp=sharing)"
     main()
 
 
